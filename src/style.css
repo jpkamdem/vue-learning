@@ -1,0 +1,11 @@
+:root {
+  --border-color: #dbd8e0;
+  --navigation-hover: #f2f1f4;
+  --navigation-active: #e1d9ff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
