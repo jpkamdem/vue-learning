@@ -15,14 +15,17 @@ defineProps<{ isActive: boolean }>();
 
 <style scoped>
 aside {
+  height: 100%;
+  background: white;
   border-right: 1px solid var(--border-color);
+  z-index: 10;
+  top: 59px;
 }
 
 ul {
   width: 280px;
   display: flex;
   flex-flow: column nowrap;
-  background: white;
 }
 
 a {
@@ -41,19 +44,20 @@ a:hover {
   font-weight: 600;
 }
 
-.toggle {
-  display: block;
-}
-
 @media (max-width: 900px) {
   aside {
+    height: 95%;
     display: none;
+    position: absolute;
+    top: 60px;
+  }
+
+  .toggle {
+    display: block;
   }
 
   ul {
     height: 80dvh;
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
   }
 }
 </style>

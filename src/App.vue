@@ -1,13 +1,19 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import { ref } from "vue";
+import { RouterView, useRoute } from "vue-router";
+import { ref, watch } from "vue";
 import Header from "./components/Header.vue";
 import Navigation from "./components/Navigation.vue";
+
+const route = useRoute();
 
 const isActive = ref(false);
 function setIsActive() {
   isActive.value = !isActive.value;
 }
+
+watch(route, () => {
+  isActive.value = false;
+});
 </script>
 
 <template>
@@ -34,16 +40,9 @@ function setIsActive() {
 main {
   width: 50dvw;
   margin-inline: auto;
-  border-inline: 1px solid var(--border-color);
 }
 
 @media (max-width: 2000px) {
-  main {
-    width: 60dvw;
-  }
-}
-
-@media (max-width: 1760px) {
   main {
     width: 60dvw;
   }
