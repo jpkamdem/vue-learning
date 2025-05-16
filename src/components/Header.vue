@@ -33,12 +33,15 @@ defineEmits(["toggle-navigation"]);
 header {
   border-bottom: 1px solid var(--border-color);
   position: relative;
-  padding: 1em;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h3 {
   color: black;
+  padding: 1em;
 }
 
 .burger-icon {
